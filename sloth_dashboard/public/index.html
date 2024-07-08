@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sloth Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login-button">Login</button>
+    </div>
+    <div id="main-container" class="container" style="display: none;">
+        <h1>Sloth Dashboard</h1>
+        <div class="main-content">
+            <div id="map" class="map-container"></div>
+            <div id="log" class="log-container">
+                <h2>Activity Log</h2>
+                <div id="log-content"></div>
+            </div>
+        </div>
+        <div class="control-panel">
+            <button id="speaker-on">Speaker On</button>
+            <button id="speaker-off">Speaker Off</button>
+            <button id="led-on">LED On</button>
+            <button id="led-off">LED Off</button>
+        </div>
+        <img src="IMG_5842.jpg" alt="Sloth" class="sloth_image">
+    </div>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="app.js"></script>
+    <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFdNAstsBsD7_QYr0od9UX8Ya8Lk_k6vg&callback=initMap"></script>
+</body>
+</html>
