@@ -16,6 +16,7 @@ function initMap() {
     connectMQTT();
 }
  
+// to publish, example: mosquitto_pub -t "gps/coordinates" -h "test.mosquitto.org" -p 1883 -m "{\"lat\": 42.415340, \"lon\": -71.126366}"
 function connectMQTT() {
     const client = mqtt.connect('wss://test.mosquitto.org:8081');
 
@@ -57,6 +58,6 @@ function updateMap(lat, lon) {
     const newPosition = new google.maps.LatLng(lat, lon);
     marker.setPosition(newPosition);
     map.setCenter(newPosition);
-    map.setZoom(13);
+    map.setZoom(18);
     console.log('Map updated with coordinates:', lat, lon);
 }
